@@ -20,3 +20,13 @@
 ・Native GamePlay Tag → Input Confing Data Asset 
 → Custom Input Component → Binding Inputs(キャラクタークラスなどに配置可能) → Assign assets in editor 
 
+・APIを先頭につけるとほかのモジュールからアクセスできるようになる
+
+--Native GamePlay Tag --
+UE_DECLARE_GAMEPLAY_TAG_EXTERN(InputTag_Move）
+UE_DEFINE_GAMEPLAY_TAG(InputTag_Move,"InputTag.Move"）
+一つ目はC++で使用できる変数、二つ目はエディターで表示される名前
+
+-- Input Config Data Asset --
+meta=(CateGories = "Input Tag"))
+ここではInputTagから始まるタグのみ選択できるようになる
